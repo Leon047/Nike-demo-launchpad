@@ -1,5 +1,7 @@
 """The module contains all URLs for requests."""
 
+post_request_url = "https://c25nnqnhgk.execute-api.us-east-1.amazonaws.com/v0/predict"
+
 url_shoes_for_choice = [
 
     "https://content.adidas.co.in/static/Product-CM7531/Unisex_OUTDOOR_SANDALS_CM7531_1.jpg",
