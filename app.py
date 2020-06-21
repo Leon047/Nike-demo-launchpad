@@ -1,8 +1,7 @@
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
+import app_requests
 import design
-from app_requests import App_Requests
-from request_urls import *
 
 class App(QtWidgets.QMainWindow, design.Ui_MainWindow):
     def __init__(self):
@@ -47,10 +46,9 @@ class App(QtWidgets.QMainWindow, design.Ui_MainWindow):
     def search_pushbutton(self):
         self.pushButton.setText(_translate("MainWindow", "SEARCH"))
 
-# ==========================================================================
-
-    def app_act(self):
+    def clicked_images(self):
         # Clicking on a shoe selection.
+
         self.image0.clicked.connect(self,show_shoes_for_choice)
         self.image1.clicked.connect(self,show_shoes_for_choice)
         self.image2.clicked.connect(self,show_shoes_for_choice)
@@ -63,11 +61,11 @@ class App(QtWidgets.QMainWindow, design.Ui_MainWindow):
         self.image9.clicked.connect(self,show_shoes_for_choice)
         self.image10.clicked.connect(self,show_shoes_for_choice)
 
-
 def main():
     app = QtWidgets.QApplication(sys.argv)
     window = App()
     window.show()
+    app_requests.base_request()
     app.exec_()
 
 if __name__ == '__main__':
