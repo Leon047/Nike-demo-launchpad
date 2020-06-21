@@ -1,6 +1,8 @@
 import json
+# import io
 import requests
-# from request_headers import *
+from PIL import Image
+from io import BytesIO
 from request_urls import *
 
 
@@ -12,7 +14,6 @@ class App_Requests:
             with BytesIO(image.content) as f:
                 with Image.open(f) as out:
                     out.save('image/image{}.jpg'.format(count))
-
 
     def create_json(self):
         all_data = {}
@@ -40,14 +41,28 @@ class App_Requests:
         with open('payload.json', 'w') as f:
             json.dump(names_in_json, f, indent=2)
 
+def post_req():
+    with open('payload.json') as f:
+        file_content = f.read()
+        json_templates = json.loads(file_content)
+    response =  requests.post(url = post_request_url,
+                              json=json_templates,
+                              stream=True)
+    with open('sarsh_response.json', 'w') as data:
+        json.dump(response.json(), data, indent=2)
+
+
+def sarch_req(): # ===================
+    with open('sarsh_response.json', 'r') as f:
+        data = json.loads(f.read())
+    sarch_url_list = data['index']
+    for count, url in enumerate(sarch_url_list):
+        image = requests.get(url, stream=True, timeout=0.6)
+        with BytesIO(image.content) as f:
+
+            with Image.open(f) as out:
+                out.save('image/image{}.jpg'.format(count))
+
 
 if __name__=="__main__":
     App_Requests()
-
-    #with open('payload.json') as f:
-        #print(f.read())
-
-
-
-
-

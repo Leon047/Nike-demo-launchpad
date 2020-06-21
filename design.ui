@@ -10,11 +10,15 @@
     <x>0</x>
     <y>0</y>
     <width>701</width>
-    <height>744</height>
+    <height>743</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>image/favicon.ico</normaloff>image/favicon.ico</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="pushButton">
@@ -231,30 +235,80 @@
     <property name="title">
      <string/>
     </property>
-    <widget class="QLabel" name="photo_8">
-     <property name="geometry">
-      <rect>
-       <x>240</x>
-       <y>20</y>
-       <width>121</width>
-       <height>161</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>TextLabel</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="photo_9">
      <property name="geometry">
       <rect>
-       <x>380</x>
-       <y>20</y>
+       <x>400</x>
+       <y>30</y>
        <width>121</width>
-       <height>161</height>
+       <height>151</height>
       </rect>
      </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>image/image9.jpg</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="photo_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>121</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>image/image6.jpg</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="photo_7">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>30</y>
+       <width>121</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>image/image7.jpg</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="photo_8">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>30</y>
+       <width>121</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>image/image8.jpg</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QLabel" name="photo_10">
@@ -267,33 +321,13 @@
       </rect>
      </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string/>
      </property>
-    </widget>
-    <widget class="QLabel" name="photo_6">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>20</y>
-       <width>121</width>
-       <height>161</height>
-      </rect>
+     <property name="pixmap">
+      <pixmap>image/image10.jpg</pixmap>
      </property>
-     <property name="text">
-      <string>TextLabel</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="photo_7">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>20</y>
-       <width>101</width>
-       <height>161</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>TextLabel</string>
+     <property name="scaledContents">
+      <bool>true</bool>
      </property>
     </widget>
    </widget>

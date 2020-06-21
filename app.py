@@ -9,30 +9,23 @@ class App(QtWidgets.QMainWindow, design.Ui_MainWindow):
         super().__init__()
         self.setupUi(self)
 
-    def app_act(self):
-        # Clicking on a shoe selection.
-        self.image0.clicked.connect(self,show_shoes_for_choice)
-        self.image1.clicked.connect(self,show_shoes_for_choice)
-        self.image2.clicked.connect(self,show_shoes_for_choice)
-        self.image3.clicked.connect(self,show_shoes_for_choice)
-        self.image4.clicked.connect(self,show_shoes_for_choice)
-
     def base_image(self):
-        self.photo.setPixmap(QtGui.QPixmap(image0))
-        self.photo_1.setPixmap(QtGui.QPixmap(image1))
-        self.photo_2.setPixmap(QtGui.QPixmap(image2))
-        self.photo_3.setPixmap(QtGui.QPixmap(image3))
-        self.photo_4.setPixmap(QtGui.QPixmap(image4))
+        self.photo.setPixmap(QtGui.QPixmap("image/image0.jpg"))
+        self.photo_1.setPixmap(QtGui.QPixmap("image/image1.jpg"))
+        self.photo_2.setPixmap(QtGui.QPixmap("image/image2.jpg"))
+        self.photo_3.setPixmap(QtGui.QPixmap("image/image3.jpg"))
+        self.photo_4.setPixmap(QtGui.QPixmap("image/image4.jpg"))
+
 
     def query_image(self):
-        self.photo_5.setPixmap(QtGui.QPixmap(image5))
+        self.photo_5.setPixmap(QtGui.QPixmap("image/image5.jpg"))
 
     def found_images():
-        self.photo_6.setPixmap(QtGui.QPixmap(image2))
-        self.photo_7.setPixmap(QtGui.QPixmap(image2))
-        self.photo_8.setPixmap(QtGui.QPixmap(image2))
-        self.photo_9.setPixmap(QtGui.QPixmap(image2))
-        self.photo_10.setPixmap(QtGui.QPixmap(image2))
+        self.photo_6.setPixmap(QtGui.QPixmap("image/image6.jpg"))
+        self.photo_7.setPixmap(QtGui.QPixmap("image/image7.jpg"))
+        self.photo_8.setPixmap(QtGui.QPixmap("image/image8.jpg"))
+        self.photo_9.setPixmap(QtGui.QPixmap("image/image9.jpg"))
+        self.photo_10.setPixmap(QtGui.QPixmap("image/image10.jpg"))
 
     def gender_combobox(self):
         self.comboBox.setItemText(0, _translate("MainWindow", "All"))
@@ -47,16 +40,28 @@ class App(QtWidgets.QMainWindow, design.Ui_MainWindow):
 
     def positive_attributes_lineedit(self):
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit.setGeometry(QtCore.QRect(10, 260, 781, 31))
-        self.lineEdit.setObjectName("lineEdit")
 
     def negative_attributes_lineedit(self):
         self.lineEdit_1 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_1.setGeometry(QtCore.QRect(130, 210, 241, 21))
-        self.lineEdit_1.setObjectName("lineEdit_2")
 
     def search_pushbutton(self):
         self.pushButton.setText(_translate("MainWindow", "SEARCH"))
+
+# ==========================================================================
+
+    def app_act(self):
+        # Clicking on a shoe selection.
+        self.image0.clicked.connect(self,show_shoes_for_choice)
+        self.image1.clicked.connect(self,show_shoes_for_choice)
+        self.image2.clicked.connect(self,show_shoes_for_choice)
+        self.image3.clicked.connect(self,show_shoes_for_choice)
+        self.image4.clicked.connect(self,show_shoes_for_choice)
+
+        self.image6.clicked.connect(self,show_shoes_for_choice)
+        self.image7.clicked.connect(self,show_shoes_for_choice)
+        self.image8.clicked.connect(self,show_shoes_for_choice)
+        self.image9.clicked.connect(self,show_shoes_for_choice)
+        self.image10.clicked.connect(self,show_shoes_for_choice)
 
 
 def main():
