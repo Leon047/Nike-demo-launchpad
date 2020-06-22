@@ -66,7 +66,7 @@ def sarch_request():
         with BytesIO(image.content) as f:
 
             with Image.open(f) as out:
-                out.save('image/image{}.jpg'.format(count))
+                out.save('image/image{}.jpg'.format(count+5))
 
 if __name__=="__main__":
     post_request()
