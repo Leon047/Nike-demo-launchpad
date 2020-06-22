@@ -1,30 +1,62 @@
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel
+from PyQt5.QtGui import QIcon, QPixmap
 import app_requests
 import design
 
 class App(QtWidgets.QMainWindow, design.Ui_MainWindow):
+
     def __init__(self):
         super().__init__()
         self.setupUi(self)
 
     def base_image(self):
+        self.photo = ClickableLabel()
         self.photo.setPixmap(QtGui.QPixmap("image/image0.jpg"))
-        self.photo_1.setPixmap(QtGui.QPixmap("image/image1.jpg"))
-        self.photo_2.setPixmap(QtGui.QPixmap("image/image2.jpg"))
-        self.photo_3.setPixmap(QtGui.QPixmap("image/image3.jpg"))
-        self.photo_4.setPixmap(QtGui.QPixmap("image/image4.jpg"))
+        self.photo.clicked.connect(label_clicked)
 
+        self.photo_1 = ClickableLabel()
+        self.photo_1.setPixmap(QtGui.QPixmap("image/image1.jpg"))
+        self.photo_1.clicked.connect(label_clicked)
+
+        self.photo_2 = ClickableLabel()
+        self.photo_2.setPixmap(QtGui.QPixmap("image/image2.jpg"))
+        self.photo_2.clicked.connect(label_clicked)
+
+        self.photo_3 = ClickableLabel()
+        self.photo_3.setPixmap(QtGui.QPixmap("image/image3.jpg"))
+        self.photo_3.clicked.connect(label_clicked)
+
+        self.photo_4 = ClickableLabel()
+        self.photo_4.setPixmap(QtGui.QPixmap("image/image4.jpg"))
+        self.photo_4.clicked.connect(label_clicked)
 
     def query_image(self):
         self.photo_5.setPixmap(QtGui.QPixmap("image/image5.jpg"))
 
     def found_images():
+        self.photo_6 = ClickableLabel()
         self.photo_6.setPixmap(QtGui.QPixmap("image/image6.jpg"))
+        self.photo_6.clicked.connect(label_clicked)
+
+        self.photo_7 = ClickableLabel()
         self.photo_7.setPixmap(QtGui.QPixmap("image/image7.jpg"))
+        self.photo_7.clicked.connect(label_clicked)
+
+        self.photo_8 = ClickableLabel()
         self.photo_8.setPixmap(QtGui.QPixmap("image/image8.jpg"))
+        self.photo_8.clicked.connect(label_clicked)
+
+        self.photo_9 = ClickableLabel()
         self.photo_9.setPixmap(QtGui.QPixmap("image/image9.jpg"))
+        self.photo_9.clicked.connect(label_clicked)
+
+        self.photo_10 = ClickableLabel()
         self.photo_10.setPixmap(QtGui.QPixmap("image/image10.jpg"))
+        self.photo_10.clicked.connect(label_clicked)
+
+
 
     def gender_combobox(self):
         self.comboBox.setItemText(0, _translate("MainWindow", "All"))
@@ -46,20 +78,12 @@ class App(QtWidgets.QMainWindow, design.Ui_MainWindow):
     def search_pushbutton(self):
         self.pushButton.setText(_translate("MainWindow", "SEARCH"))
 
-    def clicked_images(self):
-        # Clicking on a shoe selection.
 
-        self.image0.clicked.connect(self,show_shoes_for_choice)
-        self.image1.clicked.connect(self,show_shoes_for_choice)
-        self.image2.clicked.connect(self,show_shoes_for_choice)
-        self.image3.clicked.connect(self,show_shoes_for_choice)
-        self.image4.clicked.connect(self,show_shoes_for_choice)
+    def label_clicked(self, source): pass
+        # Events for clicking on the image.
 
-        self.image6.clicked.connect(self,show_shoes_for_choice)
-        self.image7.clicked.connect(self,show_shoes_for_choice)
-        self.image8.clicked.connect(self,show_shoes_for_choice)
-        self.image9.clicked.connect(self,show_shoes_for_choice)
-        self.image10.clicked.connect(self,show_shoes_for_choice)
+
+    def search_pushbutton_clicked(self): pass
 
 def main():
     app = QtWidgets.QApplication(sys.argv)
