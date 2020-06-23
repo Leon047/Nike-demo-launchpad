@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>666</width>
+    <width>670</width>
     <height>725</height>
    </rect>
   </property>
@@ -24,6 +24,12 @@
   <property name="windowIcon">
    <iconset>
     <normaloff>image/favicon.ico</normaloff>image/favicon.ico</iconset>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="pushButton">
@@ -120,8 +126,11 @@
       <x>0</x>
       <y>0</y>
       <width>661</width>
-      <height>191</height>
+      <height>181</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="title">
      <string/>
@@ -438,7 +447,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>666</width>
+     <width>670</width>
      <height>22</height>
     </rect>
    </property>

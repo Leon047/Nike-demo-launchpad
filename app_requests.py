@@ -5,43 +5,21 @@ import io
 import requests
 from PIL import Image
 from io import BytesIO
-from request_urls import *
+import request_data
 
 
 def base_request():
     """Initial http request for source images from 'base_shoes_ur' list"""
-    for count, url in enumerate(base_shoes_url):
-        image = requests.get(url, stream=True, timeout=0.6)
+    for count, url in enumerate(request_data.base_shoes_url):
+        image = requests.get(url, stream=True, timeout=0.7)
         with BytesIO(image.content) as f:
             with Image.open(f) as out:
                 out.save('image/image{}.jpg'.format(count))
 
 def create_json():
-    """
-    Fills and creates a JSON file with subsequentstoragein the root directory.
-    """
-    all_data = {}
-    add_positive_attributes = []
-    add_negative_attributes = []
-    casual = "False"
-    sport = "False"
-    gender = "All"
-    model_id = "v3"
-    topk = 5
-    image_url = ["https://ae01.alicdn.com/kf/HTB1EyKjaI_vK1Rjy0Foq6xIxVXah.jpg_q50.jpg"]
-    sub_url = "https://ae01.alicdn.com/kf/HTB1EyKjaI_vK1Rjy0Foq6xIxVXah.jpg_q50.jpg"
-    names_in_json = { "all_data": all_data,
-                      "add_words": add_positive_attributes,
-                      "sub_words": add_negative_attributes,
-                      "casual": casual,
-                      "sport": sport,
-                      "gender": gender,
-                      "model_id": model_id,
-                      "topk": topk,
-                      "url": image_url,
-                       0: sub_url }
+    """ From the dictionary creates a JSON file """
     with open('payload.json', 'w') as f:
-        json.dump(names_in_json, f, indent=2)
+        json.dump(request_data.names_in_json, f, indent=2)
 
 def post_request():
     """Sends user selected data in json format and gets json with url list."""

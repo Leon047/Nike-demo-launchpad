@@ -10,3 +10,28 @@ base_shoes_url = [
     "https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dwb9eb8c43/images/a_107/167708C_A_107X1.jpg",
     "https://images.vans.com/is/image/Vans/EYEW00-HERO?$583x583$"
 ]
+
+# User entered data
+all_data = {}
+add_positive_attributes = []
+add_negative_attributes = []
+casual = "False"
+sport = "False"
+gender = "All"
+model_id = "v3"
+topk = 5
+image_url = ["https://ae01.alicdn.com/kf/HTB1EyKjaI_vK1Rjy0Foq6xIxVXah.jpg_q50.jpg"]
+sub_url = "https://ae01.alicdn.com/kf/HTB1EyKjaI_vK1Rjy0Foq6xIxVXah.jpg_q50.jpg"
+
+# Converting data to json form
+names_in_json = { "all_data": all_data,
+                  "add_words": add_positive_attributes,
+                  "sub_words": add_negative_attributes,
+                  "casual": casual,
+                  "sport": sport,
+                  "gender": gender,
+                  "model_id": model_id,
+                  "topk": topk,
+                  "url": image_url,
+                   0: sub_url
+                 }
