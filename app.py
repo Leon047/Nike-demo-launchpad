@@ -13,9 +13,9 @@ class App(QtWidgets.QMainWindow, design.Ui_MainWindow):
 
     def base_image(self):
         # Basic definitions of photo
-        self.photo = ClickableLabel(self)
-        self.photo_link=self.photo.setPixmap(QtGui.QPixmap("image/image0.jpg"))
-        self.photo.clicked.connect(self.label_clicked)
+        self.photo_0 = ClickableLabel(self)
+        self.photo0_link=self.photo.setPixmap(QtGui.QPixmap("image/image0.jpg"))
+        self.photo_0.clicked.connect(self.label_clicked)
 
         self.photo_1 = ClickableLabel(self)
         self.photo1_link=self.photo_1.setPixmap(QtGui.QPixmap("image/image1.jpg"))

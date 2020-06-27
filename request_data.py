@@ -2,6 +2,7 @@
 
 post_request_url = "https://c25nnqnhgk.execute-api.us-east-1.amazonaws.com/v0/predict"
 
+# base image urls
 base_shoes_url = [
     "https://content.adidas.co.in/static/Product-CM7531/Unisex_OUTDOOR_SANDALS_CM7531_1.jpg",
     "https://cdn.shopify.com/s/files/1/0080/1374/2161/products/product-image-897958210_640x.jpg?v=1571713841",
@@ -35,3 +36,17 @@ names_in_json = { "all_data": all_data,
                   "url": image_url,
                    0: sub_url
                  }
+
+# label and image names 
+label_data = {  "photo_0": "image/image0.jpg",
+                "photo_1": "image/image1.jpg",
+                "photo_2": "image/image2.jpg",
+                "photo_3": "image/image3.jpg",
+                "photo_4": "image/image4.jpg",
+                "photo_5": "image/image5.jpg",
+                "photo_6": "image/image6.jpg",
+                "photo_7": "image/image7.jpg",
+                "photo_8": "image/image8.jpg",
+                "photo_9": "image/image9.jpg",
+                "photo_10": "image/image10.jpg"
+              }
